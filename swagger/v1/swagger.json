@@ -1,0 +1,800 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/inputandoutput/index/": {
+      "get": {
+        "summary": "Retrieves all inputandoutput",
+        "tags": [
+          "Input or Output"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": " ",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/inputandoutput/get": {
+      "get": {
+        "summary": "Retrieves inputandoutput",
+        "tags": [
+          "Input or Output"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": " ",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password_digest": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "confirmation_token": {
+                  "type": "string"
+                },
+                "confirmed_at": {
+                  "type": "string"
+                },
+                "confirmation_sent_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/inputandoutput/getId{id}": {
+      "post": {
+        "summary": "Retrieves inputandoutput for id",
+        "tags": [
+          "Input or Output"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": " ",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password_digest": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "confirmation_token": {
+                  "type": "string"
+                },
+                "confirmed_at": {
+                  "type": "string"
+                },
+                "confirmation_sent_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/inputandoutput/show{id}": {
+      "post": {
+        "summary": "Retrieves inputandoutput for id",
+        "tags": [
+          "Input or Output"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Loaded Data",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/inputandoutput": {
+      "post": {
+        "summary": "Create a inputandoutput",
+        "tags": [
+          "Input or Output"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Input or Output created successfully"
+          },
+          "422": {
+            "description": "Error created input or output"
+          }
+        }
+      }
+    },
+    "/inputandoutput/update": {
+      "put": {
+        "summary": "Update a inputandoutput",
+        "tags": [
+          "Input or Output"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "user_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Updated input or output"
+          },
+          "422": {
+            "description": "Error input or output not updated"
+          }
+        }
+      }
+    },
+    "/inputandoutput/destroy": {
+      "delete": {
+        "summary": "Delete a inputandoutput",
+        "tags": [
+          "Input or Output"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Deleted input or output"
+          },
+          "422": {
+            "description": "Error deleted input or output"
+          }
+        }
+      }
+    },
+    "/users/index/": {
+      "get": {
+        "summary": "Retrieves all users",
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": " ",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password_digest": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "confirmation_token": {
+                  "type": "string"
+                },
+                "confirmed_at": {
+                  "type": "string"
+                },
+                "confirmation_sent_at": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/users/get{id}": {
+      "post": {
+        "summary": "Retrieves users for role",
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": " ",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password_digest": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "confirmation_token": {
+                  "type": "string"
+                },
+                "confirmed_at": {
+                  "type": "string"
+                },
+                "confirmation_sent_at": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/users/show{id}": {
+      "post": {
+        "summary": "Retrieves users for id",
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Loaded User",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password_digest": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "confirmation_token": {
+                  "type": "string"
+                },
+                "confirmed_at": {
+                  "type": "string"
+                },
+                "confirmation_sent_at": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error in load"
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "summary": "Create a user",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "password_confirmation": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User created successfully"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    },
+    "/users/update": {
+      "put": {
+        "summary": "Update a user",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "password_confirmation": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Updated user"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    },
+    "/users/destroy": {
+      "delete": {
+        "summary": "Delete a user",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Deleted user"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    },
+    "/users/confirm": {
+      "post": {
+        "summary": "Confirm Token",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User confirmed successfully"
+          },
+          "422": {
+            "description": "Invalid token"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "summary": "Login Users",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "password",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "{auth_token: auth_token}"
+          },
+          "401": {
+            "description": "Invalid username / password"
+          }
+        }
+      }
+    },
+    "/users/email_update": {
+      "post": {
+        "summary": "Email user update",
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Email updated successfully"
+          },
+          "401": {
+            "description": "The email link seems to be invalid / expired. Try requesting for a new one."
+          }
+        }
+      }
+    }
+  }
+}
