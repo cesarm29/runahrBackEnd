@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+api rails runa hr with auth jwt
 
-Things you may want to cover:
+# install
 
-* Ruby version
+bundle install
 
-* System dependencies
+#configuration
 
-* Configuration
+# bd postgresql
+rake:db create
+rake db migrate
 
-* Database creation
+#init server
+rails s
 
-* Database initialization
+# api doc
+http://localhost:3000/api/docs
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
